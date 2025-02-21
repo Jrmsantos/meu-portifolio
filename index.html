@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Junior Moraes</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -378,6 +379,36 @@ section p {
         font-size: 30px;
         cursor: pointer;
     }
+    .contador-visitas {
+        margin-top: 10px;
+        font-size: 16px; /* Ajuste do tamanho da fonte */
+        color: #ecf0f1; /* Cor clara para contraste com #2c3e50 */
+        text-align: center; /* Centraliza o texto do contador */
+        font-family: Arial, sans-serif; /* Ajusta a fonte */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contador-visitas p {
+        margin: 0;
+        font-weight: normal; /* Deixa o texto mais suave */
+        display: flex;
+        align-items: center;
+        font-size: 16px; /* Ajuste do tamanho da fonte */
+    }
+
+    .contador-visitas i {
+        font-size: 18px; /* Aumentado o tamanho do ícone */
+        color: #dbbb4f; /* Cor suave para o ícone */
+        margin-right: 8px; /* Adicionando espaço entre o ícone e o número */
+    }
+
+    .contador-visitas span {
+        font-size: 17px; /* Ajustado o tamanho do número */
+        color: #dbbb4f; /* Cor clara para o número */
+    }
+
     </style>
 </head>
 <body>
@@ -387,6 +418,11 @@ section p {
             <h1>Cezar Junior Moraes dos Santos</h1>
         </div>
         <p>Supervisor de TI | Especialista em Redes e Infraestrutura</p>
+        
+        <!-- Contador fictício de visitantes com ícone de olho -->
+        <div class="contador-visitas">
+            <p><i class="fas fa-eye"></i><span id="contador">41</span></p>
+        </div>
     </header>
     
     
@@ -624,5 +660,26 @@ function openImageModal1(imageSrc) {
         document.getElementById('imageModal1').style.display = 'none';
     };
     </script>
+    <script>
+        // Recupera o contador armazenado no localStorage, ou inicializa com 41
+        let contadorElement = document.getElementById('contador');
+        let numeroVisitas = localStorage.getItem('visitas') ? parseInt(localStorage.getItem('visitas')) : 41; // Começa em 41
+        let numeroAlvo = 100; // Número final do contador de visitas (ajuste conforme necessário)
+    
+        // Atualiza o contador e armazena no localStorage
+        function atualizarContador() {
+            if (numeroVisitas < numeroAlvo) {
+                numeroVisitas++;
+                localStorage.setItem('visitas', numeroVisitas); // Armazena o contador atualizado no localStorage
+            }
+            contadorElement.textContent = numeroVisitas.toLocaleString(); // Atualiza o contador na tela
+        }
+    
+        // Chama a função para atualizar o contador quando a página carrega
+        window.onload = atualizarContador;
+    </script>
+    
+    
+    
 </body>
 </html>
