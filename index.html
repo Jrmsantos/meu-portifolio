@@ -408,7 +408,164 @@ section p {
         font-size: 17px; /* Ajustado o tamanho do número */
         color: #dbbb4f; /* Cor clara para o número */
     }
+    .contact-list {
+        list-style: none;
+        padding: 0;
+    }
+    .contact-list li {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+    .contact-list i {
+        margin-right: 8px;
+        color: #007bff;
+    }
+    .contact-list a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+    .contact-list a:hover {
+        text-decoration: underline;
+    }
+    #competencias {
+        text-align: center;
+        padding: 40px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
+    h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .competencias-lista {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .competencias-lista li {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        text-align: center;
+    }
+
+    .competencia-titulo {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .openModal {
+        background: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .openModal:hover {
+        background: #0056b3;
+    }
+    #qualificacoes {
+        text-align: center;
+        padding: 40px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .qualificacoes-lista {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .qualificacoes-lista li {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 250px;
+        text-align: center;
+    }
+    #sobre {
+    background-color: #f4f7fc; /* Fundo suave para destacar a seção */
+    padding: 50px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+#sobre .container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombras suaves para destacar */
+}
+
+
+#sobre .description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+#sobre .description:last-child {
+    margin-bottom: 0;
+}
+
+/* Adicionando hover para interatividade */
+#sobre .title:hover {
+    color: #0056b3;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #sobre .container {
+        padding: 20px;
+    }
+
+    #sobre .title {
+        font-size: 2rem;
+    }
+
+    #sobre .description {
+        font-size: 1rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -438,37 +595,45 @@ section p {
     </nav>
     
     <section id="sobre" class="content active">
-        <h2>Sobre Mim</h2>
-        <p>Profissional de TI com experiência sólida e diversificada em suporte técnico e infraestrutura, atuando em diversas empresas e exercendo papéis estratégicos ao longo da carreira. Especializado em manutenção de computadores, suporte a usuários finais e administração de redes, com expertise em configuração de hardware e software, personalização de sistemas operacionais, implementação de imagens, gerenciamento de servidores AD e criação de GPOs.</p>
-        <p>Atualmente, atuo como Supervisor de TI, liderando equipes, otimizando a infraestrutura e implementando medidas de segurança para garantir operações eficientes e seguras. Desenvolvi um sistema de chamados totalmente operante, com controle de ativos de TI, gerenciamento de tempo via Business Intelligence (B.I.), controle de hierarquia e automações em tempo real para envio de chamados via WhatsApp.</p>
-        <p>Proativo, orientado a resultados e sempre em busca de novos desafios que expandam meus horizontes na área de tecnologia.</p>
+        <div class="container">
+            <h2 class="title">Sobre Mim</h2>
+            <p class="description">
+                Profissional de TI com experiência sólida e diversificada em suporte técnico e infraestrutura, atuando em diversas empresas e exercendo papéis estratégicos ao longo da carreira. Especializado em manutenção de computadores, suporte a usuários finais e administração de redes, com expertise em configuração de hardware e software, personalização de sistemas operacionais, implementação de imagens, gerenciamento de servidores AD e criação de GPOs.
+            </p>
+            <p class="description">
+                Atualmente, atuo como Supervisor de TI, liderando equipes, otimizando a infraestrutura e implementando medidas de segurança para garantir operações eficientes e seguras. Desenvolvi um sistema de chamados totalmente operante, com controle de ativos de TI, gerenciamento de tempo via Business Intelligence (B.I.), controle de hierarquia e automações em tempo real para envio de chamados via WhatsApp.
+            </p>
+            <p class="description">
+                Proativo, orientado a resultados e sempre em busca de novos desafios que expandam meus horizontes na área de tecnologia.
+            </p>
+        </div>
     </section>
     
-    <section id="experiencia" class="content">
-        <h2>Experiência Profissional</h2>
-        <ul>
-            <li>
-                <strong>Grupo Educacional Faveni</strong> - Supervisor de T.I (2023 - Presente)
-                <button onclick="openModal('modal-faveni')">Ver Atividades</button>
-            </li>
-            <li>
-                <strong>Grupo Educacional Faveni</strong> - Especialista em T.I (2022 - 2023)
-                <button onclick="openModal('modal-faveni1')">Ver Atividades</button>
-            </li>
-            <li>
-                <strong>Mira Informática LTDA</strong> - Especialista em Suporte de T.I (2021 - 2022)
-                <button onclick="openModal('modal-mira')">Ver Atividades</button>
-            </li>
-            <li>
-                <strong>Icomp Soluções em TI</strong> - Especialista em Suporte de T.I (2020 - 2021)
-                <button onclick="openModal('modal-icomp')">Ver Atividades</button>
-            </li>
-            <li>
-                <strong>Impretec Informática LTDA</strong> - Especialista em Suporte de T.I (2019 - 2020)
-                <button onclick="openModal('modal-impretec')">Ver Atividades</button>
-            </li>
-        </ul>
-    </section>
+   <section id="experiencia" class="content">
+    <h2>Experiência Profissional</h2>
+    <ul class="experiencia-lista">
+        <li>
+            <strong>Grupo Educacional Faveni</strong> - Supervisor de T.I (2023 - Presente)
+            <button onclick="openModal('modal-faveni')">Ver Atividades</button>
+        </li>
+        <li>
+            <strong>Grupo Educacional Faveni</strong> - Especialista em T.I (2022 - 2023)
+            <button onclick="openModal('modal-faveni1')">Ver Atividades</button>
+        </li>
+        <li>
+            <strong>Mira Informática LTDA</strong> - Especialista em Suporte de T.I (2021 - 2022)
+            <button onclick="openModal('modal-mira')">Ver Atividades</button>
+        </li>
+        <li>
+            <strong>Icomp Soluções em TI</strong> - Especialista em Suporte de T.I (2020 - 2021)
+            <button onclick="openModal('modal-icomp')">Ver Atividades</button>
+        </li>
+        <li>
+            <strong>Impretec Informática LTDA</strong> - Especialista em Suporte de T.I (2019 - 2020)
+            <button onclick="openModal('modal-impretec')">Ver Atividades</button>
+        </li>
+    </ul>
+</section>
     
     <!-- Modais -->
     <div id="modal-faveni" class="modal">
@@ -547,24 +712,89 @@ section p {
     </div>
     <section id="qualificacoes" class="content">
         <h2>Qualificações</h2>
-        <ul>
+        <ul class="qualificacoes-lista">
             <li>INFOSERV - REDES</li>
             <li>UDEMY - MIKROTIK</li>
+            <li>UDEMY - PFSENSE</li>
             <li>UDEMY - WINDOWS SERVER 2022</li>
             <li>UDEMY - HYPER-V</li>
+            <li>UDEMY - MONITORAMENTO ZABBIX</li>
+            <li>ALURA - REDES DE COMPUTADORES</li>
+            <li>ALURA - CONCEITOS EM PHP</li>
         </ul>
     </section>
     
     <section id="competencias" class="content">
         <h2>Competências</h2>
-        <ul>
-            <li>Gestão de infraestrutura de TI</li>
-            <li>Servidor Windows</li>
-            <li>Active Directory</li>
-            <li>Administração de redes</li>
-            <li>Virtualização (Hyper-V, VMware)</li>
+        <ul class="competencias-lista">
+            <li>
+                <span class="competencia-titulo">Infraestrutura e Gestão de TI</span>
+                <button class="openModal" data-target="modal1">Ver Skills</button>
+            </li>
+            <li>
+                <span class="competencia-titulo">Suporte Técnico e Manutenção</span>
+                <button class="openModal" data-target="modal2">Ver Skills</button>
+            </li>
+            <li>
+                <span class="competencia-titulo">Atendimento e Experiência do Cliente</span>
+                <button class="openModal" data-target="modal3">Ver Skills</button>
+            </li>
+            <li>
+                <span class="competencia-titulo">Outras Competências</span>
+                <button class="openModal" data-target="modal4">Ver Skills</button>
+            </li>
         </ul>
     </section>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Infraestrutura e Gestão de TI</h3>
+            <ul>
+                <li>Gestão e administração de infraestrutura de TI</li>
+                <li>Servidores Windows e Active Directory</li>
+                <li>Diretiva de Grupo e Backup</li>
+                <li>Administração de redes e Redes LAN-WAN</li>
+                <li>Cabeamento estruturado</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Suporte Técnico e Manutenção</h3>
+            <ul>
+                <li>Manutenção e reparo de computadores e impressoras</li>
+                <li>Suporte de hardware e Help Desk</li>
+                <li>Solução de problemas e manutenção preventiva</li>
+                <li>Sistemas operacionais e instalação de computadores</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Atendimento e Experiência do Cliente</h3>
+            <ul>
+                <li>Suporte ao cliente e satisfação do cliente</li>
+                <li>Resolução de problemas e comunicação eficaz</li>
+                <li>Treinamento e atividades de integração de equipe</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Outras Competências</h3>
+            <ul>
+                <li>Controle de inventário e armazenagem</li>
+                <li>Vendas e fidelização de clientes</li>
+                <li>Trabalho em equipe e liderança</li>
+            </ul>
+        </div>
+    </div>
     <section id="projetos" class="content"> 
         <h2>Projetos</h2>
         <div class="projetos-grid">
@@ -607,10 +837,24 @@ section p {
     
     <section id="contato" class="content">
         <h2>Contato</h2>
-        <p>Telefone: (33) 9 8427-6583 | <a href="https://whatsa.me/5533984276583" target="_blank">WhatsApp</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/junior-moraes23/" target="_blank">Cezar Junior Moraes dos Santos</a></p>
-        <p>Email: junior.infra12@gmail.com</p>
-       
+        <ul class="contact-list">
+            <li>
+                <i class="fas fa-phone"></i> Telefone: (33) 9 8427-6583 |
+                <a href="https://whatsa.me/5533984276583" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </li>
+            <li>
+                <i class="fab fa-linkedin"></i> LinkedIn:
+                <a href="https://www.linkedin.com/in/junior-moraes23/" target="_blank">
+                    Cezar Junior Moraes dos Santos
+                </a>
+            </li>
+            <li>
+                <i class="fas fa-envelope"></i> Email:
+                <a href="mailto:junior.infra12@gmail.com">junior.infra12@gmail.com</a>
+            </li>
+        </ul>
     </section>
     
     <footer>
@@ -679,6 +923,25 @@ function openImageModal1(imageSrc) {
         window.onload = atualizarContador;
     </script>
     
+    <script>
+        document.querySelectorAll(".openModal").forEach(button => {
+            button.onclick = function() {
+                document.getElementById(this.getAttribute("data-target")).style.display = "block";
+            };
+        });
+        document.querySelectorAll(".close").forEach(span => {
+            span.onclick = function() {
+                this.closest(".modal").style.display = "none";
+            };
+        });
+        window.onclick = function(event) {
+            document.querySelectorAll(".modal").forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        };
+    </script>
     
     
 </body>
