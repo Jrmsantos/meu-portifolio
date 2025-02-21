@@ -313,6 +313,31 @@ section p {
     transform: scale(1.05);
 }
 
+.projeto p {
+    font-size: 14px; /* Ajuste de fonte */
+    line-height: 1.4; /* Espaçamento entre linhas */
+    margin: 0; /* Remove margens extras */
+    padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
+    text-align: center; /* Garante que o texto ficará centralizado */
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .projetos-grid {
+        grid-template-columns: 1fr; /* 1 coluna para telas pequenas */
+    }
+
+    .projeto p {
+        font-size: 12px; /* Menor fonte em dispositivos móveis */
+    }
+}
+
     /* Modal exclusivo (modal1) */
     .modal1 {
         display: none;
